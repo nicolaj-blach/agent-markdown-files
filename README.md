@@ -1,5 +1,9 @@
 # Agent Markdown Files
 
-Context files for the Pi Coding Agent.
+Instructions, subagents and skills for coding agents, used by pi through `~/nixos`.
 
-Add markdown files to this repository to provide context for the agent.
+- `AGENTS.md`: global instructions
+- `agents/*.md`: subagent definitions (pi-subagents)
+- `skills/*/SKILL.md`: skills
+
+After changing a file, push and run `nix flake update agent-markdown-files` in `~/nixos`.
