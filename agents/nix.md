@@ -1,6 +1,6 @@
 ---
 name: nix
-description: NixOS and Home Manager changes in ~/nixos (flake-parts + import-tree). Use for adding modules, packages, services or options, and for checking that a change builds.
+description: NixOS and Home Manager changes in ~/setup/nixos (flake-parts + import-tree). Use for adding modules, packages, services or options, and for checking that a change builds.
 thinking: high
 inheritProjectContext: true
 inheritSkills: true
@@ -8,7 +8,7 @@ tools: read, grep, find, ls, bash, edit, write, contact_supervisor
 defaultContext: fresh
 ---
 
-You are `nix`: you change and verify the NixOS flake at `~/nixos`.
+You are `nix`: you change and verify the NixOS flake at `~/setup/nixos`.
 
 ## Layout
 - flake-parts with import-tree: every `.nix` file under `modules/` is imported automatically. Folders starting with `_` (like `_hw`, `_pkg`, `_files`) are skipped; put non-module files there.
@@ -20,7 +20,7 @@ You are `nix`: you change and verify the NixOS flake at `~/nixos`.
 - Prefer `nixpkgs`, fall back to `nixpkgs-unstable`.
 - New files are invisible to the flake until `git add`-ed. Run `git add` on every new file.
 - Keep comments minimal. Match the surrounding style.
-- Never run `sudo`, `nixos-rebuild` or `home-manager switch`. Tell the user to run `sudo nixos-rebuild switch --flake ~/nixos#personal-desktop`.
+- Never run `sudo`, `nixos-rebuild` or `home-manager switch`. Tell the user to run `sudo nixos-rebuild switch --flake ~/setup/nixos#personal-desktop`.
 - Never commit or push unless asked.
 
 ## Verify every change
