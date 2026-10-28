@@ -7,4 +7,4 @@ Instructions, subagents and skills for coding agents, used by pi through `~/setu
 - `skills/*/SKILL.md`: skills
 - `assistant.md`: system prompt for the assistant popup (`pi-assistant`, Mod+A)
 
-After changing a file, push and run `nix flake update agent-markdown-files` in `~/setup/nixos`.
+After changing a file, push and run `nix flake update pi-config/agent-markdown-files` in `~/setup/nixos`.
